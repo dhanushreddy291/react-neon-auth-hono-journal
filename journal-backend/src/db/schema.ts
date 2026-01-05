@@ -163,4 +163,3 @@ export const journalEntries = pgTable('journal_entries', {
 	content: text('content').notNull(),
 	createdAt: timestamp('created_at').defaultNow(),
 });
-export type JournalEntry = typeof journalEntries.$inferSelect;

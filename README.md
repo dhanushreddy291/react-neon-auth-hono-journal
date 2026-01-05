@@ -91,7 +91,6 @@ sequenceDiagram
 ## 📚 Learn more
 
 - [Neon Auth Overview](https://neon.com/docs/auth/overview)
-- [How Neon Auth works](https://neon.com/docs/neon-auth/how-it-works)
 - [Neon Auth JWT Plugin](https://neon.com/docs/auth/guides/plugins/jwt)
 - [React with Neon Auth UI (UI Components)](https://neon.com/docs/auth/quick-start/react-router-components)
 - [Use Neon Auth with React (API methods)](https://neon.com/docs/auth/quick-start/react)
