@@ -39,7 +39,7 @@ This service is responsible for:
         <p align="left">
           <img src="../images/connection_details.png" alt="Neon Connection Details" width="500"/>
         </p>
-    -  `NEON_AUTH_BASE_URL`: Found in the Neon Console under **Auth** tab.
+    -  `NEON_AUTH_URL`: Found in the Neon Console under **Auth** tab.
         <p align="left">
           <img src="../images/neon-auth-base-url.png" alt="Neon Auth URL" width="500"/> 
         </p>
@@ -49,7 +49,7 @@ This service is responsible for:
     DATABASE_URL="postgresql://[user]:[password]@[neon_hostname]/[dbname]?sslmode=require"
 
     # Found in Neon Console -> Auth -> Configuration
-    NEON_AUTH_BASE_URL"https://ep-xxx.neon.tech/neondb/auth"
+    NEON_AUTH_URL"https://ep-xxx.neon.tech/neondb/auth"
     ```
 
     > Replace the placeholders with your actual Neon project details.
@@ -80,12 +80,12 @@ The core security mechanism is in the middleware found in `src/index.ts`. It use
 
 ```typescript
 const JWKS = jose.createRemoteJWKSet(
-  new URL(`${process.env.NEON_AUTH_BASE_URL}/.well-known/jwks.json`)
+  new URL(`${process.env.NEON_AUTH_URL}/.well-known/jwks.json`)
 );
 
 // Verifies that the token was signed by Neon Auth
 const { payload } = await jose.jwtVerify(token, JWKS, {
-  issuer: new URL(process.env.NEON_AUTH_BASE_URL!).origin,
+  issuer: new URL(process.env.NEON_AUTH_URL!).origin,
 });
 ```
 

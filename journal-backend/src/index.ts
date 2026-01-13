@@ -16,7 +16,7 @@ const sql = neon(process.env.DATABASE_URL!);
 const db = drizzle(sql);
 
 const JWKS = jose.createRemoteJWKSet(
-  new URL(`${process.env.NEON_AUTH_BASE_URL}/.well-known/jwks.json`)
+  new URL(`${process.env.NEON_AUTH_URL}/.well-known/jwks.json`)
 );
 
 const authMiddleware = async (c: Context<{ Variables: AppVariables }>, next: Next) => {
@@ -29,7 +29,7 @@ const authMiddleware = async (c: Context<{ Variables: AppVariables }>, next: Nex
 
   try {
     const { payload } = await jose.jwtVerify(token, JWKS, {
-      issuer: new URL(process.env.NEON_AUTH_BASE_URL!).origin,
+      issuer: new URL(process.env.NEON_AUTH_URL!).origin,
     });
     if (!payload.sub) {
       return c.json({ error: 'Invalid Token' }, 401);
