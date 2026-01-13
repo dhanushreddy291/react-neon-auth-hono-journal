@@ -41,7 +41,7 @@ This service is responsible for:
         </p>
     -  `NEON_AUTH_URL`: Found in the Neon Console under **Auth** tab.
         <p align="left">
-          <img src="../images/neon-auth-base-url.png" alt="Neon Auth URL" width="500"/> 
+          <img src="../images/neon-auth-url.png" alt="Neon Auth URL" width="500"/> 
         </p>
 
     ```env

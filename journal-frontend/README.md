@@ -36,7 +36,7 @@ This application handles:
     Then, edit `.env` to add your Neon Auth URL and Backend API URL:
 
     <p align="left">
-      <img src="../images/neon-auth-base-url.png" alt="Neon Auth URL" width="500"/> 
+      <img src="../images/neon-auth-url.png" alt="Neon Auth URL" width="500"/> 
     </p>
 
     ```env

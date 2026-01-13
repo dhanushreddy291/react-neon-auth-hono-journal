@@ -29,7 +29,7 @@ Follow the full guide on [Neon Guides: Building a secure React Backend with Neon
 1.  Go to the [Neon Console](https://console.neon.tech).
 2.  Create a new project.
 3.  **Enable Auth** in the Auth tab.
-4.  Copy your **Auth Base URL** and **Database Connection String**.
+4.  Copy your **Auth URL** and **Database Connection String**.
 
 ### Setup the Backend
 Navigate to the backend folder, install dependencies, and run migrations.
